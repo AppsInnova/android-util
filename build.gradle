@@ -18,6 +18,18 @@ dependencies {
     provided 'com.google.android:android:4.1.1.4'
 }
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+javadoc {
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        author true // 支持author标记
+        version true // 支持version标记
+    }
+}
 //------
 
 apply plugin: 'maven'
@@ -43,7 +55,7 @@ signing {
 }
 
 group = 'com.yy'
-version = '1.0.0'
+version = '1.0.1'
 
 uploadArchives {
     repositories {

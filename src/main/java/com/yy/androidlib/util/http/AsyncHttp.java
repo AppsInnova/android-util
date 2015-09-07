@@ -179,7 +179,6 @@ public class AsyncHttp {
         get(url, transferToNewCallback(callback), headers);
     }
 
-    //加入接口上报
     private static void report(long startTime, String url, int status) {
         if (profiling != null) {
             profiling.report(startTime, url, status);
